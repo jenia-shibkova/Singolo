@@ -1,0 +1,31 @@
+@import url("normalize.css");
+@import url("fonts.css");
+
+body {
+  font-family: "Lato", "Verdana", sans-serif;
+  font-weight: 400;
+}	
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+h2 {
+  font-weight: 700;
+}
