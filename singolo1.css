@@ -46,15 +46,26 @@ img {
 
 .header {
   background: var(--background-dark);
+}
+
+.decor { 
+  padding-bottom: 6px; 
   position: relative;
 }
 
-.header::after {
+.decor::after {
   position: absolute;
   content: "";
   height: 6px;
   width: 100%;
+} 
+
+.decor--header::after {  
   background: var(--light-dark);
+}
+
+.decor--services::after {
+  background: #ffffff;
 }
 
 .header__wrapper {
@@ -68,6 +79,10 @@ img {
       -ms-flex-align: center;
           align-items: center;  
   min-height: 89px; 
+}
+
+.header__logo-link {
+  text-decoration: none;
 }
 
 .header__logo {
@@ -91,6 +106,7 @@ img {
 }
 
 /* Navigation */
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,17 +124,13 @@ img {
   padding: 20px 14px 20px;
   display: inline-block;
   cursor: pointer;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
-  transition: all 0.7s;
-}
-
-.navigation__item-link--active {
-  color: var(--pink);
+  -webkit-transition: color 0.7s;
+  -o-transition: color 0.7s;
+  transition: color 0.7s;
 }
 
 .navigation__item-link:hover {
-  color: var(--light-grey);
+  color: var(--pink);
 }
 
 .navigation__item {
@@ -174,9 +186,9 @@ img {
   background-image: url("assets/img/next.svg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: background-image 0.5s;
+  -o-transition: background-image 0.5s;
+  transition: background-image 0.5s;
 }
 
 .slider__button:hover,
@@ -213,14 +225,6 @@ img {
 .services {
   background: var(--background-white);
   position: relative;
-}
-
-.services::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 6px;
-  background: #ffffff;
 }
 
 .services__wrapper {
