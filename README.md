@@ -1,2 +1,1 @@
 # Singolo
-Singolo
