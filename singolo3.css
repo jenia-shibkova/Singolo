@@ -168,9 +168,19 @@ img {
 
 /* Get-in-touch */
 
+.get-in-touch {
+  background: var(--color-primary);
+}
+
+.get-in-touch__wrapper {
+  padding-bottom: 57px;
+}
+
 .get-in-touch__title {
   font-size: 30px;
   font-weight: 900;
+  padding: 61px 10px 19px;
+  margin: 0;
   color: var(--color-text-additional);
 }
 
@@ -178,13 +188,67 @@ img {
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
+  padding: 0 10px 33px;
+  margin: 0;
+  color: var(--color-text-additional);
+}
+
+.get-in-touch__inner-wrapper {
+  display: flex;
+  padding: 10px 8px 10px 10px;
+  justify-content: space-between;
+}
+
+.get-in-touch__form {
+  width: 620px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-in-touch__contacts  {
+  width: 302px;
+}
+
+/* input */
+
+.input {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  height: 38px;
+  padding: 6px 13px 10px;
+  box-sizing: border-box;
+  background: var(--color-form-input);
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.7s;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+  border-color: var(--color-text-additional); 
   color: var(--color-text-additional);
 }
 
 .textarea {
   width: 100%;
-  height: 200px;
+  height: 202px;
   resize: none;
+  border-radius: 5px;
+  padding: 6px 13px 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  background: var(--color-form-input);
+  outline: none;
+  transition: border-color 0.7s;
+}
+
+.textarea:hover,
+.textarea:focus,
+.textarea:active {
+  border-color: var(--color-text-additional); 
+  color: var(--color-text-additional);
 }
 
 ::-webkit-input-placeholder { /* Edge */
@@ -214,12 +278,23 @@ img {
 .contacts__title {
   font-size: 18px;
   font-weight: 900;
+  padding: 0 0 8px;
+  margin: 0;
 }
 
 .contacts__desc {
   font-size: 12px;
   line-height: 21px;
   font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
 }
 
 .contacts__item {
@@ -227,6 +302,13 @@ img {
   line-height: 21px;
   font-weight: 400;
   color: var(--color-text-additional);
+  padding-left: 24px;
+  position: relative;
+  transition: color 0.7s;
+}
+
+.contacts__item:not(:first-of-type):hover {
+  color: var(--light-dark);
 }
 
 .contacts__link {
