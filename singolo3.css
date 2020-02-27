@@ -318,9 +318,68 @@ img {
 
 /* Footer */
 
+.footer {
+  background: var(--background-dark);
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-headers);
+  min-height: 76px;
+}
+
+.footer__copyright {
+  padding-left: 11px;
+}
+
 .copyright {
   font-size: 12px;
   color: var(--color-headers);
+  display: inline-block;
 }
 
+
 /* Social */
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;  
+}
+
+.social__link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-headers);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-headers);
+  margin-right: 8px;
+  -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+.footer__social .social__link:hover {
+  color: var(--color-light);
+  border-color: var(--color-light);
+  background: var(--background-dark);
+}
+
+.footer__social {
+  padding-right: 2px;
+}
