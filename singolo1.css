@@ -2,13 +2,14 @@
 @import url("fonts.css");
 
 :root {
-  --background-dark: #2d303a;
-  --light-dark: #323746;
-  --background-white: #f2f2f2;
-  --pink: #f06c64;
-  --dark-grey: #666d89;
-  --light-grey: #767e9e;
-  --dots-color: #494e62;
+  --background-dark : #2d303a;
+  --light-dark      : #323746;
+  --background-light: #f2f2f2;
+  --color-light     : #ffffff;
+  --color-primary   : #f06c64;
+  --color-headers   : #666d89;
+  --color-text      : #767e9e;
+  --color-dots      : #494e62;
 }
 
 body {
@@ -60,12 +61,12 @@ img {
   width: 100%;
 } 
 
-.decor--header::after {  
+.decor--dark::after {  
   background: var(--light-dark);
 }
 
-.decor--services::after {
-  background: #ffffff;
+.decor--light::after {
+  background: var(--color-light);
 }
 
 .header__wrapper {
@@ -83,6 +84,7 @@ img {
 
 .header__logo-link {
   text-decoration: none;
+  display: inline-flex;
 }
 
 .header__logo {
@@ -98,7 +100,7 @@ img {
 .header__logo::after {
   content: "*";
   position: absolute;
-  color: var(--pink);
+  color: var(--color-primary);
 }
 
 .header__navigation {
@@ -130,7 +132,7 @@ img {
 }
 
 .navigation__item-link:hover {
-  color: var(--pink);
+  color: var(--color-primary);
 }
 
 .navigation__item {
@@ -149,7 +151,7 @@ img {
 .navigation__item:not(:last-of-type)::after {
   position: absolute;
   content: "";
-  background: var(--dots-color);
+  background: var(--color-dots);
   width: 2px;
   height: 2px;
   border-radius: 50%;
@@ -159,7 +161,7 @@ img {
 /* slider */
 
 .slider {
-  background: var(--pink);
+  background: var(--color-primary);
 }
 
 .slider__wrapper {  
@@ -223,7 +225,7 @@ img {
 /* services */
 
 .services {
-  background: var(--background-white);
+  background: var(--background-light);
   position: relative;
 }
 
@@ -236,7 +238,7 @@ img {
   padding: 0;
   font-weight: 900;
   font-size: 30px;
-  color: var(--dark-grey);  
+  color: var(--color-headers);  
   padding-top: 61px;
 }
 
@@ -244,7 +246,7 @@ img {
   font-size: 18px;
   line-height: 30px;
   font-weight: 300px;
-  color: var(--light-grey);
+  color: var(--color-text);
   margin-bottom: 23px;
 }
 
@@ -313,7 +315,7 @@ img {
   margin: 0;
   font-size: 18px;
   font-weight: 900;
-  color: var(--dark-grey);
+  color: var(--color-headers);
   padding-top: 21px;
   padding-bottom: 9px;
 }
@@ -323,6 +325,6 @@ img {
   font-size: 12px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--light-grey);
+  color: var(--color-text);
   padding-bottom: 10px;
 }
