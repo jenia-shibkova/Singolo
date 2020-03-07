@@ -124,7 +124,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;  
-  min-height: 89px; 
+  min-height: 88px; 
 }
 
 .header__logo {
@@ -165,7 +165,7 @@ img {
   text-transform: uppercase;
   font-size: 12px;
   color: var(--color-light);
-  padding: 20px 14px 20px;
+  padding: 20px 14px 21px;
   display: inline-block;
   cursor: pointer;
   -webkit-transition: color 0.7s;
@@ -214,8 +214,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 52px;
-  padding-bottom: 58px;
+  padding-top: 53px;
+  margin-bottom: 58px;
 } 
 
 .slider__button {
@@ -246,7 +246,7 @@ img {
 }
 
 .slider__images {
-  width: 798px;
+  width: 796px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,6 +284,7 @@ img {
   font-weight: 300px;
   color: var(--color-text);
   margin-bottom: 23px;
+  text-align: justify;
 }
 
 .services__list {
@@ -297,6 +298,7 @@ img {
       flex-basis: 300px;    
   padding-left: 80px;
   position: relative;
+  text-align: justify;
 }
 
 .services__item::before {
@@ -338,8 +340,8 @@ img {
   font-size: 18px;
   font-weight: 900;
   color: var(--color-headers);
-  padding-top: 21px;
-  padding-bottom: 9px;
+  margin-top: 21px;
+  margin-bottom: 9px;
 }
 
 .services__content {
@@ -348,7 +350,7 @@ img {
   line-height: 21px;
   font-weight: 400;
   color: var(--color-text);
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Portfolio */
@@ -363,7 +365,8 @@ img {
 
 .portfolio__title {
   margin: 0;
-  padding: 62px 10px 19px;
+  padding: 61px 10px 0;
+  margin-bottom: 19px;
   font-size: 30px;
   font-weight: 900;
   color: var(--color-headers);  
@@ -371,7 +374,8 @@ img {
 
 .portfolio__desc {
   margin: 0;
-  padding: 0 10px 9px;
+  padding: 0 10px;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
@@ -453,7 +457,8 @@ img {
   font-weight: 900;
   color: var(--color-headers);
   margin: 0;
-  padding: 61px 10px 20px;
+  padding: 61px 10px 0;
+  margin-bottom: 20px;
 }
 
 .about-us__desc {
@@ -461,8 +466,10 @@ img {
   line-height: 30px;
   color: var(--color-text);
   margin: 0;
-  padding: 0 10px 44px;
+  padding: 0 10px;
   font-weight: 300;
+  text-align: justify;
+  margin-bottom: 44px;
 }
 
 .about-us__team {
@@ -478,7 +485,7 @@ img {
   font-weight: 900;
   color: var(--color-headers);
   margin: 0;
-  padding: 13px 0 8px;
+  margin: 13px 0 8px;
 }
 
 .crewman__desc {
@@ -486,8 +493,8 @@ img {
   line-height: 21px;
   font-weight: 400;
   color: var(--color-text);
-  padding: 0px 0 25px;
   margin: 0;
+  margin-bottom: 24px;
 }
 
 /* social */
@@ -542,8 +549,9 @@ img {
 .get-in-touch__title {
   font-size: 30px;
   font-weight: 900;
-  padding: 61px 10px 19px;
+  padding: 61px 10px 0;
   margin: 0;
+  margin-bottom: 20px;
   color: var(--color-text-additional);
 }
 
@@ -551,9 +559,11 @@ img {
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
-  padding: 0 10px 33px;
+  padding: 0 10px;
   margin: 0;
+  margin-bottom: 33px;
   color: var(--color-text-additional);
+  text-align: justify;
 }
 
 .get-in-touch__inner-wrapper {
@@ -690,9 +700,10 @@ img {
 
 .contacts__title {
   font-size: 18px;
+  line-height: 18px;
   font-weight: 900;
-  padding: 0 0 8px;
   margin: 0;
+  margin-bottom: 11px;
 }
 
 .contacts__desc {
@@ -707,7 +718,7 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 25px;
+  margin-top: 23px;
 }
 
 .contacts__item {
