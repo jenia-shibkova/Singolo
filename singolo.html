@@ -7,13 +7,13 @@
   <link href="singolo.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header decor decor--dark">
+  <header class="header">
     <div class="header__wrapper wrapper">
       <h1 class="header__logo">Singolo</h1>
 
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="navigation__item"><a href="#" class="navigation__item-link navigation__item-link--active">Home</a></li>
+          <li class="navigation__item"><a href="#slider" class="navigation__item-link navigation__item-link--active">Home</a></li>
           <li class="navigation__item"><a href="#services" class="navigation__item-link">Services</a></li>
           <li class="navigation__item"><a href="#portfolio" class="navigation__item-link">Portfolio</a></li>
           <li class="navigation__item"><a href="#about-us" class="navigation__item-link">About</a></li>
@@ -24,7 +24,7 @@
   </header>
 
   <main class="content">
-    <section class="slider decor decor--pink">
+    <section id="slider" class="slider">
       <div class="slider__wrapper  wrapper">
         <h2 class="visually-hidden">Projects example</h2>
         <button type="button" class="slider__button slider__button--prev button"></button>
@@ -36,7 +36,7 @@
       </div>      
     </section>
 
-    <section id="services" class="services decor decor--light">
+    <section id="services" class="services">
       <div class="services__wrapper  wrapper">
         <h2 class="services__title">Our Services</h2>
         <p class="services__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
@@ -85,7 +85,7 @@
       </div>      
     </section>
 
-    <section id="portfolio" class="portfolio decor decor--dark">
+    <section id="portfolio" class="portfolio">
       <div class="portfolio__wrapper wrapper">
         <h2 class="portfolio__title">Portfolio</h2>
         <p class="portfolio__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -140,7 +140,7 @@
       </div>  
     </section>
 
-    <section id="about-us" class="about-us decor decor--light">
+    <section id="about-us" class="about-us">
       <div class="about-us__wrapper wrapper">
         <h2 class="about-us__title">About Us</h2>
         <p class="about-us__desc">
@@ -246,7 +246,7 @@
       </div>
     </section>
 
-    <section id="get-in-touch" class="get-in-touch decor decor--pink">
+    <section id="get-in-touch" class="get-in-touch">
       <div class="get-in-touch__wrapper wrapper">        
         <h2 class="get-in-touch__title">Get a Quote</h2>
         <p class="get-in-touch__desc">
@@ -321,5 +321,7 @@
       </ul>
     </div>    
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
