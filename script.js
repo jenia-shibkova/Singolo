@@ -1,10 +1,4 @@
-window.onload = () => {
-  onNavigationClick();
-  onTagsClick();
-  addBlackScreen();
-  popupAction();
-}
-
+// header navigation
 
 const onNavigationClick = () => {
   document.querySelector('.navigation').addEventListener('click', ({target} = event) => {
@@ -16,6 +10,8 @@ const onNavigationClick = () => {
     }  
   });  
 };
+
+// tags action
 
 const onTagsClick = () => {
   const projectsWrapper = document.querySelector('.projects');
@@ -95,30 +91,30 @@ const popupAction = () => {
     let descriptionTemplate;
 
     if (subject) {
-      subjectTemplate = `<p class="popup__subject">Subject: <span class="popup__name">${subject}</span></p>`;
+      subjectTemplate = `<p class='popup__subject'>Subject: <span class='popup__name'>${subject}</span></p>`;
     } else {
       subjectTemplate = `<p>Without subject</p>`;
     }
 
     if (description) {
-      descriptionTemplate = `<p class="popup__desc">Description: <span class="popup__desc-name">${description}</span></p>`
+      descriptionTemplate = `<p class='popup__desc'>Description: <span class='popup__desc-name'>${description}</span></p>`
     } else {
       descriptionTemplate = `<p>Without description</p>`;
     }
 
     const template = `
-      <div class="popup">
-        <div class="popup__content">      
-          <p class="popup__title">The letter was sent</p>
+      <div class='popup'>
+        <div class='popup__content'>      
+          <p class='popup__title'>The letter was sent</p>
           ${subjectTemplate}
           ${descriptionTemplate}
-          <button class="button popup__button">OK</button>
+          <button class='button popup__button'>OK</button>
         </div>
       </div>`;
 
       const contentWrapper = document.querySelector('.content');
       const popup = createElement(template);
-      
+
       contentWrapper.appendChild(popup);
       closePopup();
   });  
@@ -135,4 +131,57 @@ const closePopup = () => {
     const popup = document.querySelector('.popup');
     document.querySelector('.content').removeChild(popup);    
   })
+};
+
+// slider
+
+const sliderAction = () => {
+  const items = document.querySelectorAll('.slider__item');
+  let currentItem = 0;  
+
+  document.querySelector('.slider__button--prev').addEventListener('click', () => {
+    items[currentItem].classList.add('hidden');
+  
+    if (items[currentItem - 1]) {
+      items[currentItem - 1].classList.remove('hidden');
+      currentItem -= 1;
+    } else {
+      items[items.length - 1].classList.remove('hidden');
+      currentItem = items.length - 1;
+    } 
+
+    changeSliderBackground(currentItem);
+  });
+
+  document.querySelector('.slider__button--next').addEventListener('click', () => {
+    items[currentItem].classList.add('hidden');
+  
+    if (items[currentItem + 1]) {
+      items[currentItem + 1].classList.remove('hidden');
+      currentItem += 1;
+    } else {
+      items[0].classList.remove('hidden');
+      currentItem = 0;
+    }
+    
+    changeSliderBackground(currentItem);
+  });
+
+  const changeSliderBackground = (number) => {
+    const slider = document.querySelector('.slider');
+
+    if (number === 1) {
+      slider.style.backgroundColor = '#648bf0';
+    } else {      
+      slider.style.backgroundColor = '#f06c64'; 
+    }
+  };
+};
+
+window.onload = () => {
+  onNavigationClick();
+  onTagsClick();
+  addBlackScreen();
+  popupAction();
+  sliderAction();
 };
