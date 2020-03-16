@@ -312,6 +312,7 @@ img {
 }
 
 .hidden {
+  position: relative;
   display: none;
 }
 
@@ -903,4 +904,45 @@ img {
 
 .footer__social {
   padding-right: 2px;
+}
+
+/* popup */
+
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;  
+  z-index: 5;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__content {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--background-light);
+  border-radius: 3px;
+  padding: 40px;
+}
+
+.popup__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.popup__subject,
+.popup__desc {
+  text-align-last: left;
+  font-weight: 400;
+}
+
+.popup__button {
+  margin-top: auto;  
 }
