@@ -2,13 +2,21 @@
 
 const onNavigationClick = () => {
   document.querySelector('.navigation').addEventListener('click', ({target} = event) => {
+    event.preventDefault();
+
     const activeItem = document.querySelector('.navigation__item-link--active');
 
     if (target.classList.contains('navigation__item-link')) {
       activeItem.classList.remove('navigation__item-link--active');
       target.classList.add('navigation__item-link--active');
+      
+      const headerHeight = 94;
+      const anchorValue = target.getAttribute('href');
+      const elementOffsetTopValue = document.querySelector(anchorValue).offsetTop;
+
+      window.scrollTo(0, elementOffsetTopValue - headerHeight);
     }  
-  });  
+  });
 };
 
 // tags action
