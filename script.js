@@ -2,6 +2,7 @@ window.onload = () => {
   onNavigationClick();
   onTagsClick();
   addBlackScreen();
+  popupAction();
 }
 
 
@@ -79,4 +80,59 @@ const addBlackScreen = () => {
       }
     } 
   });
+};
+
+// form popup
+
+const popupAction = () => {  
+  document.querySelector('.form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const subject = document.querySelector('.input__subject').value;
+    const description = document.querySelector('.textarea').value;
+    
+    let subjectTemplate;
+    let descriptionTemplate;
+
+    if (subject) {
+      subjectTemplate = `<p class="popup__subject">Subject: <span class="popup__name">${subject}</span></p>`;
+    } else {
+      subjectTemplate = `<p>Without subject</p>`;
+    }
+
+    if (description) {
+      descriptionTemplate = `<p class="popup__desc">Description: <span class="popup__desc-name">${description}</span></p>`
+    } else {
+      descriptionTemplate = `<p>Without description</p>`;
+    }
+
+    const template = `
+      <div class="popup">
+        <div class="popup__content">      
+          <p class="popup__title">The letter was sent</p>
+          ${subjectTemplate}
+          ${descriptionTemplate}
+          <button class="button popup__button">OK</button>
+        </div>
+      </div>`;
+
+      const contentWrapper = document.querySelector('.content');
+      const popup = createElement(template);
+      
+      contentWrapper.appendChild(popup);
+      closePopup();
+  });  
+};
+
+const createElement = (template) => {
+  const newElement = document.createElement('template');
+  newElement.innerHTML = template;
+  return newElement.content.children[0];
+};
+
+const closePopup = () => {
+  document.querySelector('.popup__button').addEventListener('click', () => {
+    const popup = document.querySelector('.popup');
+    document.querySelector('.content').removeChild(popup);    
+  })
 };
