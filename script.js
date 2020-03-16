@@ -1,6 +1,7 @@
 window.onload = () => {
   onNavigationClick();
   onTagsClick();
+  addBlackScreen();
 }
 
 
@@ -43,4 +44,39 @@ const reorderProjectsItems = () => {
 
   const projectsArr = [...projects].reverse();
   return projectsArr;
+};
+
+
+// iphone screens action
+
+const addBlackScreen = () => {  
+  const firstBlackScreen = document.querySelector('.slider__black-screen--first');
+  const secondBlackScreen = document.querySelector('.slider__black-screen--second');
+
+  document.querySelector('.slider__images').addEventListener('click', ({target} = event) => {
+
+    if (target.classList.contains('slider__phone-button--first')) {
+      if (firstBlackScreen.classList.contains('invisible')) {
+        firstBlackScreen.classList.remove('invisible');
+      } else {
+        firstBlackScreen.classList.add('invisible');
+      }      
+    } 
+    
+    if (target.classList.contains('slider__phone-button--second')) {
+      if (secondBlackScreen.classList.contains('invisible')) {
+        secondBlackScreen.classList.remove('invisible');
+      } else {
+        secondBlackScreen.classList.add('invisible');
+      }      
+    }
+
+    if (target.classList.contains('slider__black-screen')) {
+      if (target.classList.contains('invisible')) {
+        target.classList.remove('invisible');
+      } else {
+        target.classList.add('invisible');
+      }
+    } 
+  });
 };
