@@ -1,3 +1,30 @@
+// scroll event 
+
+const scrollAction = () => {
+  document.addEventListener('scroll', () => {
+    const headerHeight = 94;
+    const cursorPosition = window.scrollY + headerHeight;
+    const sections = document.querySelectorAll('.content>section');
+    const links = document.querySelectorAll('.navigation__item-link');
+
+    sections.forEach((el) => {
+      console.log(el.getAttribute('id'));
+      el.getAttribute('id');
+      console.log('link',links,links[0].getAttribute('href'))
+
+      if (el.offsetTop <= cursorPosition && (el.offsetTop + el.offsetHeight) > cursorPosition) {
+        links.forEach((link) => {
+          link.classList.remove('navigation__item-link--active');
+          console.log(link.getAttribute('href').substring(1))
+          if(el.getAttribute('id') === link.getAttribute('href').substring(1)) {
+            link.classList.add('navigation__item-link--active');
+          }
+        });
+      }
+    });
+  });
+};
+
 // header navigation
 
 const onNavigationClick = () => {
@@ -192,4 +219,5 @@ window.onload = () => {
   addBlackScreen();
   popupAction();
   sliderAction();
+  scrollAction();
 };
