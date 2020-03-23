@@ -8,8 +8,9 @@
 </head>
 <body>
   <header class="header">
+    <button class="button header__button" type="button"></button>
     <div class="header__wrapper wrapper">
-      <h1 class="header__logo">Singolo</h1>
+      <h1 class="header__logo">Singolo<sup class="header__logo-asterisk">*</sup></h1>
 
       <nav class="header__navigation">
         <ul class="navigation">
@@ -27,7 +28,7 @@
     <section id="slider" class="slider">
       <h2 class="visually-hidden">Projects example</h2>
 
-      <div class="slider__wrapper wrapper">
+      <div class="slider__wrapper">
         <button type="button" class="slider__button slider__button--prev button"></button>
         
         <div class="slider__item-wrapper">
@@ -43,7 +44,7 @@
           </div>
 
           <div class="slider__item slider__images slider__images--blue fade">
-            <img src="assets/img/slider-2.jpg">
+            <img src="assets/img/slider-2.jpg" alt="slider image">
           </div>
         </div>            
        
@@ -75,7 +76,7 @@
           <li class="services__item services__item--heart">
             <h3 class="services__item-title">Love Is The Answer</h3>
             <p class="services__content">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-              et consequat felis. Quisque condimentum.
+              et consequat felis. Quisque condimentum.             
             </p>
           </li>
           <li class="services__item services__item--phone">
@@ -109,47 +110,47 @@
         
         <div class="portfolio__tags tags">
           <span class="tag tag--active">All</span>
-          <span class="tag tag--wd">Web Design</span>
-          <span class="tag tag--gd">Graphic Design</span>
-          <span class="tag tag--aw">Artwork</span>
+          <span class="tag">Web Design</span>
+          <span class="tag">Graphic Design</span>
+          <span class="tag">Artwork</span>
         </div>
 
         <ul class="projects layout-4-columns">
           <li class="projects__item projects__item--01">
-            <img src="assets/img/image-1.jpg" alt="project-1" width="300" height="187">
+            <img src="assets/img/projects/image-1.jpg" alt="project-1">
           </li>
           <li class="projects__item projects__item--02">
-            <img src="assets/img/image-2.jpg" alt="project-2" width="300" height="187">
+            <img src="assets/img/projects/image-2.jpg" alt="project-2">
           </li>
           <li class="projects__item projects__item--03">
-            <img src="assets/img/image-3.jpg" alt="project-3" width="300" height="187">
+            <img src="assets/img/projects/image-3.jpg" alt="project-3">
           </li>
           <li class="projects__item projects__item--04">
-            <img src="assets/img/image-4.jpg" alt="project-4" width="300" height="187">
+            <img src="assets/img/projects/image-4.jpg" alt="project-4">
           </li>
           <li class="projects__item projects__item--05">
-            <img src="assets/img/image-5.jpg" alt="project-5" width="300" height="187">
+            <img src="assets/img/projects/image-5.jpg" alt="project-5">
           </li>
           <li class="projects__item projects__item--06">
-            <img src="assets/img/image-6.jpg" alt="project-6" width="300" height="187">
+            <img src="assets/img/projects/image-6.jpg" alt="project-6">
           </li>
           <li class="projects__item projects__item--07">
-            <img src="assets/img/image-7.jpg" alt="project-7" width="300" height="187">
+            <img src="assets/img/projects/image-7.jpg" alt="project-7">
           </li>
           <li class="projects__item projects__item--08">
-            <img src="assets/img/image-8.jpg" alt="project-8" width="300" height="187">
+            <img src="assets/img/projects/image-8.jpg" alt="project-8">
           </li>
           <li class="projects__item projects__item--09">
-            <img src="assets/img/image-9.jpg" alt="project-9" width="300" height="187">
+            <img src="assets/img/projects/image-9.jpg" alt="project-9">
           </li>
           <li class="projects__item projects__item--10">
-            <img src="assets/img/image-10.jpg" alt="project-10" width="300" height="187">
+            <img src="assets/img/projects/image-10.jpg" alt="project-10">
           </li>
           <li class="projects__item projects__item--11">
-            <img src="assets/img/image-11.jpg" alt="project-11" width="300" height="187">
+            <img src="assets/img/projects/image-11.jpg" alt="project-11">
           </li>
           <li class="projects__item projects__item--12">
-            <img src="assets/img/image-12.jpg" alt="project-12" width="300" height="187">
+            <img src="assets/img/projects/image-12.jpg" alt="project-12">
           </li>
         </ul>
       </div>  
@@ -166,7 +167,11 @@
         
         <div class="about-us__team layout-3-columns">
           <article class="crewman">
-            <img class="" src="assets/img/person-1.jpg" alt="person-1" width="300" height="300">
+            <picture>
+              <source srcset="./assets/img/crewman/person-1-mobile.jpg" media="(max-width: 375px)">
+              <source srcset="./assets/img/crewman/person-1-table.jpg" media="(max-width: 768px)">
+              <img class="crewman__image" src="assets/img/crewman/person-1.jpg" alt="person-1">
+            </picture>
             <h3 class="crewman__name">Adam Jensen</h3>
             <p class="crewman__desc">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus,
                nec rutrum tellus dolor id lorem.
@@ -197,7 +202,11 @@
           </article>
 
           <article class="crewman">
-            <img class="" src="assets/img/person-2.jpg" alt="person-2" width="300" height="300">
+            <picture>
+              <source srcset="./assets/img/crewman/person-2-mobile.jpg" media="(max-width: 375px)">
+              <source srcset="./assets/img/crewman/person-2-table.jpg" media="(max-width: 768px)">
+              <img class="crewman__image" src="assets/img/crewman/person-2.jpg" alt="person-2">
+            </picture>
             <h3 class="crewman__name">Desmond Miles</h3>
             <p class="crewman__desc">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
                viverra lacus ut, ultrices velit.
@@ -228,7 +237,11 @@
           </article>
 
           <article class="crewman">
-            <img class="" src="assets/img/person-3.jpg" alt="person-3" width="300" height="300">
+            <picture>
+              <source srcset="./assets/img/crewman/person-3-mobile.jpg" media="(max-width: 375px)">
+              <source srcset="./assets/img/crewman/person-3-table.jpg" media="(max-width: 768px)">
+              <img class="crewman__image" src="assets/img/crewman/person-3.jpg" alt="person-3">
+            </picture>
             <h3 class="crewman__name">Scolara Visari</h3>
             <p class="crewman__desc">Nulla sed nunc et tortor luctus faucibus.
                Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
@@ -276,7 +289,7 @@
             <input class="input" type="email" name="email" placeholder="Email (Required)" required>
             <input class="input input__subject" type="text" name="subject" placeholder="Subject">
             <textarea class="textarea" rows="4" cols="50" placeholder="Describe your project in detail..."></textarea>
-            <button class="form__button button" type="submit">Submit</button>
+            <button class="form__button button" type="submit">Send</button>
           </form>
 
           <section class="get-in-touch__contacts contacts">
@@ -310,7 +323,7 @@
 
   <footer class="footer">
     <div class="footer__wrapper wrapper">
-      <span class="footer__copyright copyright">&copy; Copyright 2013 · by PSDchat.com</span>
+      <span class="footer__copyright copyright">&copy; Copyright 2013</span>
 
       <ul class="footer__social social">
         <li class="social__item">
