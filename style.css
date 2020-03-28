@@ -65,3 +65,19 @@ img {
 .hidden {
   display: none;
 }
+
+.overlay {
+  background: #2D303A;
+  opacity: 0.6;  
+  position: fixed;
+  width: 100vw;
+  height: 100vh;  
+  z-index: 3;
+  top: 0;
+}
+
+/* .content,
+.footer {
+  display: none;
+} */
+/* overlay-tint */
