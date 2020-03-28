@@ -1,0 +1,30 @@
+.form__button {  
+  width: 136px;
+  height: 38px;
+  background: var(--color-yellow);
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: var(--color-text-button);
+  text-transform: uppercase;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.form__button:hover,
+.form__button:focus,
+.form__button:active {
+  background: var(--light-dark);
+  color: var(--color-primary);
+}
+
+
+@media (max-width: 375px) {
+  .form__button {
+    width: 100%;
+  }
+}

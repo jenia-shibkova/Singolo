@@ -1,0 +1,54 @@
+.crewman {
+  flex-basis: calc((100% - 40px) / 3);
+}
+
+.crewman__name {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-headers);
+  margin: 0;
+  margin: 13px 0 8px;
+  max-height: 20px;
+  overflow: hidden;
+}
+
+.crewman__desc {
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0;
+  margin-bottom: 24px;
+  max-height: 42px;
+  overflow: hidden;
+}
+
+@media(max-width: 768px) {
+  .crewman {
+    flex-basis: calc((100% - 30px) / 3);
+  }
+  
+  .crewman__name {
+    margin-top: 12px;
+  }
+
+  .crewman__desc {
+    margin-bottom: 16px;
+    max-height: 63px;
+  }
+}
+
+@media (max-width: 375px) {
+  .crewman {
+    flex-basis: 100%;
+    margin-bottom: 34px;
+  }
+
+  .crewman__name {
+    margin-top: 21px;
+  }
+  
+  .crewman__desc {
+    max-height: 42px;
+  }
+}

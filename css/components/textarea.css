@@ -1,0 +1,23 @@
+.textarea {
+  width: 100%;
+  height: 202px;
+  resize: none;
+  border-radius: 5px;
+  padding: 6px 13px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid transparent;
+  background: var(--color-form-input);
+  outline: none;
+  -webkit-transition: border-color 0.7s;
+  -o-transition: border-color 0.7s;
+  transition: border-color 0.7s;
+  margin-bottom: 16px;
+}
+
+.textarea:hover,
+.textarea:focus,
+.textarea:active {
+  border-color: var(--color-yellow); 
+  color: var(--color-text-additional);
+}

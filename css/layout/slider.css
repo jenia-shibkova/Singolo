@@ -1,0 +1,140 @@
+
+.slider {
+  background: var(--color-primary);
+  border-bottom: 6px solid var(--color-pink);
+  position: relative;
+}
+
+.slider--bg-blue {
+  background: var(--background-blue);
+  border-bottom: 6px solid var(--background-blue);
+}
+
+.slider__images {
+  width: 796px;
+  height: 594px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__image--first {
+  margin-top: 53px;
+}
+
+.slider__image--second {
+  margin-top: 175px;
+}
+
+.slider__wrapper {  
+  min-height: 594px;  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__item {
+  display: none;
+  position: relative;
+  animation: 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.slider__item--blue {
+  background: var(--background-blue);
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  cursor: pointer;
+  outline: 2px solid blue;
+}
+
+.slider__button--prev {
+  left: 0;
+  right: auto;
+}
+
+.slider__button--next {
+  right: 0;
+  left: auto;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .description {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .control > .arrow {
+    display: none;
+  }
+
+  .project-name {
+    display: none;
+  }
+
+  .description {
+    border: 0;
+  }
+}
