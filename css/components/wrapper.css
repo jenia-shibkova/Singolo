@@ -3,9 +3,23 @@
   margin: 0 auto;
 }
 
+@media(max-width: 1019px) {
+  .wrapper {
+    width: auto;
+    padding: 0 32px; 
+  }
+}
+
 @media(max-width: 768px) {
   .wrapper {
     width: 688px; 
+  }
+}
+
+@media(max-width: 687px) {
+  .wrapper {
+    width: auto;
+    padding: 0 32px;
   }
 }
 
