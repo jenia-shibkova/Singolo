@@ -38,9 +38,9 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 687px) {
   .crewman {
-    flex-basis: 100%;
+    flex-basis: calc((100% - 30px) / 2);
     margin-bottom: 34px;
   }
 
@@ -52,3 +52,9 @@
     max-height: 42px;
   }
 }
+
+@media (max-width: 375px) {
+  .crewman {
+    flex-basis: 100%;
+    margin-bottom: 34px;
+  }
