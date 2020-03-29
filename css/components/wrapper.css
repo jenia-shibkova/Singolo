@@ -12,7 +12,8 @@
 
 @media(max-width: 768px) {
   .wrapper {
-    width: 688px; 
+    width: auto;
+    padding: 0 32px;
   }
 }
 
