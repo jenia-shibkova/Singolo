@@ -307,6 +307,27 @@ const sliderAction = () => {
   });
 };
 
+const switchActiveProjectItem = () => {
+  const projects = document.querySelector('.projects');
+
+  const removeActiveItem = () => {
+    const activeItem = projects.querySelector('.projects__item--active');
+    if (activeItem) {      
+      activeItem.classList.remove('projects__item--active');
+    }
+  };
+  
+  projects.addEventListener('click', (event) => {
+    const target = event.path[1];
+    removeActiveItem();
+
+    if (target.classList.contains('projects__item')) {
+      if (!target.classList.contains('projects__item--active')) {
+        target.classList.add('projects__item--active');
+      }
+    }
+  });
+};
 
 window.onload = () => {
   onNavigationClick();
@@ -316,4 +337,5 @@ window.onload = () => {
   sliderAction();
   scrollAction();
   headerMenuAction();
+  switchActiveProjectItem();
 };
