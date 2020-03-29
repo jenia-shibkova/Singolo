@@ -51,6 +51,10 @@
   .crewman__desc {
     max-height: 42px;
   }
+  
+  .crewman:last-of-type {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 375px) {

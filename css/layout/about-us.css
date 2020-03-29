@@ -55,6 +55,8 @@
   }
 
   .about-us__team { 
+    /* padding: 0;
+    justify-content: space-between; */
     padding: 0;
     justify-content: space-between;
   }
