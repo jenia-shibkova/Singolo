@@ -35,15 +35,17 @@
   }
 }
 
-@media (max-width: 375px) {
-  .projects {
-    height: 559px;
-  }
-
+@media (max-width: 687px) {
   .projects__item {
     flex-basis: calc((100% - 13px) / 2);
     height: auto;
     background-color: var(--light-dark);
     margin-bottom: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .projects {
+    height: 559px;
   }
 }

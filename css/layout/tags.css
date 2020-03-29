@@ -1,6 +1,6 @@
 .tags {
   padding: 0 10px;
-  margin-bottom: 19px;
+  margin-bottom: 12px;
 }
 
 .tag {
@@ -14,6 +14,7 @@
   border-radius: 5px;
   margin-right: 7px;
   cursor: pointer;
+  margin-bottom: 7px;
 }
 
 .tag:hover,
@@ -24,7 +25,7 @@
 
 @media(max-width: 768px) {
   .tags {
-    margin-bottom: 28px;
+    margin-bottom: 21px;
     padding: 0;
   }
 }

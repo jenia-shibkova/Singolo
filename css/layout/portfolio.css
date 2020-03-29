@@ -44,7 +44,11 @@
 @media (max-width: 375px) {  
   .portfolio {
     padding-bottom: 33px;
-    padding-top: 50px;
+    padding-top: 0;
     border: none;
+  }
+
+  .portfolio__wrapper {
+    padding: 42px 32px 0;
   }
 }
