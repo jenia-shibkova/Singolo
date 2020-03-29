@@ -94,19 +94,21 @@
   overflow: hidden;
 }
 
+@media(max-width: 1019px) { 
+  .services__wrapper {
+    padding: 42px 32px 0;
+  }
+ 
+  .services__title {
+    padding-top: 0;
+  }
+}
+
 @media(max-width: 768px) {
   .services {
     border: none;
     padding-bottom: 22px;
-  }
-
-  .services__wrapper {
-    padding: 42px 0 0;
-  } 
-
-  .services__title {
-    padding-top: 0;
-  }
+  }  
   
   .services__desc {
     margin-bottom: 45px;
@@ -132,19 +134,18 @@
   }
 }  
 
-
-@media (max-width: 375px) {
+@media (max-width: 687px) {
   .services {
     padding-bottom: 0;
+  }
+
+  .services__wrapper {
+    padding: 42px 32px 0;
   }
 
   .services__item {
     margin-bottom: 35px;
     padding-right: 16px;
     flex-basis: 100%;
-  }
-  
-  .services {
-    padding-top: 34px;    
-  }
+  }  
 }  
