@@ -33,22 +33,30 @@
           <div class="slider__images">              
             <div class="slider__black-screen slider__black-screen--first invisible"></div>
             <div class="slider__phone-button slider__phone-button--first invisible"></div>
-            <img class="slider__image slider__image--first" src="assets/img/iphone-1.png" alt="iphone-1">
+            <picture class="slider__image slider__image--first">
+              <source srcset="./assets/img/slider/phone-vertical-mobile.png" media="(max-width: 687px)">
+              <source srcset="./assets/img/slider/phone-vertical-table.png" media="(max-width: 1019px)">
+              <img src="assets/img/slider/phone-1.png" alt="iphone-1">
+            </picture>
             <div class="slider__black-screen slider__black-screen--second invisible"></div>
             <div class="slider__phone-button slider__phone-button--second invisible "></div>
-            <img class="slider__image slider__image--second" src="assets/img/iphone-2.png" alt="iphone-2">
+            <picture class="slider__image slider__image--second">
+              <source srcset="./assets/img/slider/phone-horizontal-mobile.png" media="(max-width: 687px)">
+              <source srcset="./assets/img/slider/phone-horizontal-table.png" media="(max-width: 1019px)">                            
+              <img src="assets/img/slider/phone-2.png" alt="iphone-2">
+            </picture>
           </div>
         </div>         
 
         <div class="slider__item slider__item--blue">
           <div class="slider__images"> 
-            <img src="assets/img/slider-2.jpg" alt="slider image">
+            <img src="assets/img/slider/slider-2.jpg" alt="slider image">
           </div>
         </div>
       </div>
 
-      <button class="button slider__button slider__button--prev">&lt;</button>
-      <button class="button slider__button slider__button--next">&gt;</button>
+      <button class="button slider__button slider__button--prev"></button>
+      <button class="button slider__button slider__button--next"></button>
 
     </section>
 
@@ -168,8 +176,8 @@
         <div class="about-us__team layout-3-columns">
           <article class="crewman">
             <picture>
-              <source srcset="./assets/img/crewman/person-1-mobile.jpg" media="(max-width: 375px)">
-              <source srcset="./assets/img/crewman/person-1-table.jpg" media="(max-width: 768px)">
+              <source srcset="./assets/img/crewman/person-1-mobile.jpg" media="(max-width: 687px)">
+              <source srcset="./assets/img/crewman/person-1-table.jpg" media="(max-width: 1019px)">
               <img class="crewman__image" src="assets/img/crewman/person-1.jpg" alt="person-1">
             </picture>
             <h3 class="crewman__name">Adam Jensen</h3>
@@ -203,8 +211,8 @@
 
           <article class="crewman">
             <picture>
-              <source srcset="./assets/img/crewman/person-2-mobile.jpg" media="(max-width: 375px)">
-              <source srcset="./assets/img/crewman/person-2-table.jpg" media="(max-width: 768px)">
+              <source srcset="./assets/img/crewman/person-2-mobile.jpg" media="(max-width: 687px)">
+              <source srcset="./assets/img/crewman/person-2-table.jpg" media="(max-width: 1019px)">
               <img class="crewman__image" src="assets/img/crewman/person-2.jpg" alt="person-2">
             </picture>
             <h3 class="crewman__name">Desmond Miles</h3>
@@ -238,8 +246,8 @@
 
           <article class="crewman">
             <picture>
-              <source srcset="./assets/img/crewman/person-3-mobile.jpg" media="(max-width: 375px)">
-              <source srcset="./assets/img/crewman/person-3-table.jpg" media="(max-width: 768px)">
+              <source srcset="./assets/img/crewman/person-3-mobile.jpg" media="(max-width: 687px)">
+              <source srcset="./assets/img/crewman/person-3-table.jpg" media="(max-width: 1019px)">
               <img class="crewman__image" src="assets/img/crewman/person-3.jpg" alt="person-3">
             </picture>
             <h3 class="crewman__name">Scolara Visari</h3>
