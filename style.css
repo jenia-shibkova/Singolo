@@ -1,0 +1,81 @@
+/* utils */
+@import url("css/utils/variables.css");
+
+/* base */
+@import url("css/base/fonts.css");
+
+/* components */
+@import url("css/components/button.css");
+@import url("css/components/input.css");
+@import url("css/components/textarea.css");
+@import url("css/components/wrapper.css");
+@import url("css/components/layout-4-columns.css");
+@import url("css/components/layout-3-columns.css");
+@import url("css/components/popup.css");
+
+/* vendors */
+@import url("css/vendors/normalize.css");
+
+/* layout */
+@import url("css/layout/header.css");
+@import url("css/layout/navigation.css");
+@import url("css/layout/slider.css");
+@import url("css/layout/services.css");
+@import url("css/layout/portfolio.css");
+@import url("css/layout/tags.css");
+@import url("css/layout/projects.css");
+@import url("css/layout/about-us.css");
+@import url("css/layout/crewman.css");
+@import url("css/layout/social.css");
+@import url("css/layout/get-in-touch.css");
+@import url("css/layout/form.css");
+@import url("css/layout/get-in-touch.css");
+@import url("css/layout/contacts.css");
+@import url("css/layout/footer.css");
+
+
+body {
+  font-family: "Lato", "Verdana", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}	
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.overlay {
+  background: #2D303A;
+  opacity: 0.6;  
+  position: fixed;
+  width: 100vw;
+  height: 100vh;  
+  z-index: 3;
+  top: 0;
+}

@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Singolo</title>
-  <link href="singolo.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header decor decor--dark">
-    <div class="header__wrapper wrapper">
-      <h1 class="header__logo">Singolo</h1>
+  <header class="header">
+    <div class="header__wrapper wrapper">      
+      <button class="button header__button" type="button"></button>
+      <h1 class="header__logo">Singolo<sup class="header__logo-asterisk">*</sup></h1>
 
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="navigation__item"><a href="#" class="navigation__item-link navigation__item-link--active">Home</a></li>
+          <li class="navigation__item"><a href="#slider" class="navigation__item-link navigation__item-link--active">Home</a></li>
           <li class="navigation__item"><a href="#services" class="navigation__item-link">Services</a></li>
           <li class="navigation__item"><a href="#portfolio" class="navigation__item-link">Portfolio</a></li>
           <li class="navigation__item"><a href="#about-us" class="navigation__item-link">About</a></li>
@@ -24,20 +25,43 @@
   </header>
 
   <main class="content">
-    <section class="slider decor decor--pink">
-      <div class="slider__wrapper  wrapper">
-        <h2 class="visually-hidden">Projects example</h2>
-        <button type="button" class="slider__button slider__button--prev button"></button>
-        <div class="slider__images">
-          <img class="slider__image slider__image--first" src="assets/img/iphone-1.png" alt="iphone-1">
-          <img class="slider__image slider__image--last" src="assets/img/iphone-2.png" alt="iphone-2">
+    <section id="slider" class="slider">
+      <h2 class="visually-hidden">Projects example</h2>
+      <div class="slider__wrapper">
+
+        <div class="slider__item active">
+          <div class="slider__images">              
+            <div class="slider__black-screen slider__black-screen--first invisible"></div>
+            <div class="slider__phone-button slider__phone-button--first invisible"></div>
+            <picture class="slider__image slider__image--first">
+              <source srcset="./assets/img/slider/phone-vertical-mobile.png" media="(max-width: 687px)">
+              <source srcset="./assets/img/slider/phone-vertical-table.png" media="(max-width: 1019px)">
+              <img src="assets/img/slider/phone-1.png" alt="iphone-1">
+            </picture>
+            <div class="slider__black-screen slider__black-screen--second invisible"></div>
+            <div class="slider__phone-button slider__phone-button--second invisible "></div>
+            <picture class="slider__image slider__image--second">
+              <source srcset="./assets/img/slider/phone-horizontal-mobile.png" media="(max-width: 687px)">
+              <source srcset="./assets/img/slider/phone-horizontal-table.png" media="(max-width: 1019px)">                            
+              <img src="assets/img/slider/phone-2.png" alt="iphone-2">
+            </picture>
+          </div>
+        </div>         
+
+        <div class="slider__item slider__item--blue">
+          <div class="slider__images"> 
+            <img src="assets/img/slider/slider-2.jpg" alt="slider image">
+          </div>
         </div>
-        <button type="button" class="slider__button slider__button--next button"></button>
-      </div>      
+      </div>
+
+      <button class="button slider__button slider__button--prev"></button>
+      <button class="button slider__button slider__button--next"></button>
+
     </section>
 
-    <section id="services" class="services decor decor--light">
-      <div class="services__wrapper  wrapper">
+    <section id="services" class="services">
+      <div class="services__wrapper wrapper">
         <h2 class="services__title">Our Services</h2>
         <p class="services__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
           Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -60,7 +84,7 @@
           <li class="services__item services__item--heart">
             <h3 class="services__item-title">Love Is The Answer</h3>
             <p class="services__content">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-              et consequat felis. Quisque condimentum.
+              et consequat felis. Quisque condimentum.             
             </p>
           </li>
           <li class="services__item services__item--phone">
@@ -85,7 +109,7 @@
       </div>      
     </section>
 
-    <section id="portfolio" class="portfolio decor decor--dark">
+    <section id="portfolio" class="portfolio">
       <div class="portfolio__wrapper wrapper">
         <h2 class="portfolio__title">Portfolio</h2>
         <p class="portfolio__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -94,53 +118,53 @@
         
         <div class="portfolio__tags tags">
           <span class="tag tag--active">All</span>
-          <span class="tag tag--wd">Web Design</span>
-          <span class="tag tag--gd">Graphic Design</span>
-          <span class="tag tag--aw">Artwork</span>
+          <span class="tag">Web Design</span>
+          <span class="tag">Graphic Design</span>
+          <span class="tag">Artwork</span>
         </div>
 
         <ul class="projects layout-4-columns">
           <li class="projects__item projects__item--01">
-            <img src="assets/img/image-1.jpg" alt="project-1" width="300" height="187">
+            <img src="assets/img/projects/image-1.jpg" alt="project-1">
           </li>
           <li class="projects__item projects__item--02">
-            <img src="assets/img/image-2.jpg" alt="project-2" width="300" height="187">
+            <img src="assets/img/projects/image-2.jpg" alt="project-2">
           </li>
           <li class="projects__item projects__item--03">
-            <img src="assets/img/image-3.jpg" alt="project-3" width="300" height="187">
+            <img src="assets/img/projects/image-3.jpg" alt="project-3">
           </li>
           <li class="projects__item projects__item--04">
-            <img src="assets/img/image-4.jpg" alt="project-4" width="300" height="187">
+            <img src="assets/img/projects/image-4.jpg" alt="project-4">
           </li>
           <li class="projects__item projects__item--05">
-            <img src="assets/img/image-5.jpg" alt="project-5" width="300" height="187">
+            <img src="assets/img/projects/image-5.jpg" alt="project-5">
           </li>
           <li class="projects__item projects__item--06">
-            <img src="assets/img/image-6.jpg" alt="project-6" width="300" height="187">
+            <img src="assets/img/projects/image-6.jpg" alt="project-6">
           </li>
           <li class="projects__item projects__item--07">
-            <img src="assets/img/image-7.jpg" alt="project-7" width="300" height="187">
+            <img src="assets/img/projects/image-7.jpg" alt="project-7">
           </li>
           <li class="projects__item projects__item--08">
-            <img src="assets/img/image-8.jpg" alt="project-8" width="300" height="187">
+            <img src="assets/img/projects/image-8.jpg" alt="project-8">
           </li>
           <li class="projects__item projects__item--09">
-            <img src="assets/img/image-9.jpg" alt="project-9" width="300" height="187">
+            <img src="assets/img/projects/image-9.jpg" alt="project-9">
           </li>
           <li class="projects__item projects__item--10">
-            <img src="assets/img/image-10.jpg" alt="project-10" width="300" height="187">
+            <img src="assets/img/projects/image-10.jpg" alt="project-10">
           </li>
           <li class="projects__item projects__item--11">
-            <img src="assets/img/image-11.jpg" alt="project-11" width="300" height="187">
+            <img src="assets/img/projects/image-11.jpg" alt="project-11">
           </li>
           <li class="projects__item projects__item--12">
-            <img src="assets/img/image-12.jpg" alt="project-12" width="300" height="187">
+            <img src="assets/img/projects/image-12.jpg" alt="project-12">
           </li>
         </ul>
       </div>  
     </section>
 
-    <section id="about-us" class="about-us decor decor--light">
+    <section id="about-us" class="about-us">
       <div class="about-us__wrapper wrapper">
         <h2 class="about-us__title">About Us</h2>
         <p class="about-us__desc">
@@ -151,7 +175,11 @@
         
         <div class="about-us__team layout-3-columns">
           <article class="crewman">
-            <img class="" src="assets/img/person-1.jpg" alt="person-1" width="300" height="300">
+            <picture>
+              <source srcset="./assets/img/crewman/person-1-mobile.jpg" media="(max-width: 687px)">
+              <source srcset="./assets/img/crewman/person-1-table.jpg" media="(max-width: 1019px)">
+              <img class="crewman__image" src="assets/img/crewman/person-1.jpg" alt="person-1">
+            </picture>
             <h3 class="crewman__name">Adam Jensen</h3>
             <p class="crewman__desc">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus,
                nec rutrum tellus dolor id lorem.
@@ -182,7 +210,11 @@
           </article>
 
           <article class="crewman">
-            <img class="" src="assets/img/person-2.jpg" alt="person-2" width="300" height="300">
+            <picture>
+              <source srcset="./assets/img/crewman/person-2-mobile.jpg" media="(max-width: 687px)">
+              <source srcset="./assets/img/crewman/person-2-table.jpg" media="(max-width: 1019px)">
+              <img class="crewman__image" src="assets/img/crewman/person-2.jpg" alt="person-2">
+            </picture>
             <h3 class="crewman__name">Desmond Miles</h3>
             <p class="crewman__desc">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
                viverra lacus ut, ultrices velit.
@@ -213,7 +245,11 @@
           </article>
 
           <article class="crewman">
-            <img class="" src="assets/img/person-3.jpg" alt="person-3" width="300" height="300">
+            <picture>
+              <source srcset="./assets/img/crewman/person-3-mobile.jpg" media="(max-width: 687px)">
+              <source srcset="./assets/img/crewman/person-3-table.jpg" media="(max-width: 1019px)">
+              <img class="crewman__image" src="assets/img/crewman/person-3.jpg" alt="person-3">
+            </picture>
             <h3 class="crewman__name">Scolara Visari</h3>
             <p class="crewman__desc">Nulla sed nunc et tortor luctus faucibus.
                Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
@@ -246,7 +282,7 @@
       </div>
     </section>
 
-    <section id="get-in-touch" class="get-in-touch decor decor--pink">
+    <section id="get-in-touch" class="get-in-touch">
       <div class="get-in-touch__wrapper wrapper">        
         <h2 class="get-in-touch__title">Get a Quote</h2>
         <p class="get-in-touch__desc">
@@ -259,9 +295,9 @@
           <form class="get-in-touch__form form" action="#" method="POST">
             <input class="input" type="text" name="name" placeholder="Name (Required)" required>
             <input class="input" type="email" name="email" placeholder="Email (Required)" required>
-            <input class="input" type="text" name="subject" placeholder="Subject">
+            <input class="input input__subject" type="text" name="subject" placeholder="Subject">
             <textarea class="textarea" rows="4" cols="50" placeholder="Describe your project in detail..."></textarea>
-            <button class="form__button button" type="submit">Submit</button>
+            <button class="form__button button" type="submit">Send</button>
           </form>
 
           <section class="get-in-touch__contacts contacts">
@@ -295,7 +331,7 @@
 
   <footer class="footer">
     <div class="footer__wrapper wrapper">
-      <span class="footer__copyright copyright">&copy; Copyright 2013 · by PSDchat.com</span>
+      <span class="footer__copyright copyright">&copy; Copyright 2013</span>
 
       <ul class="footer__social social">
         <li class="social__item">
@@ -320,6 +356,8 @@
         </li>
       </ul>
     </div>    
-  </footer>
+  </footer>  
+  
+  <script src="script.js"></script>
 </body>
 </html>

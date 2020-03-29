@@ -1,0 +1,51 @@
+.input {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  height: 38px;
+  padding: 6px 13px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--color-form-input);
+  margin-bottom: 16px;
+  outline: none;
+  -webkit-transition: border-color 0.7s;
+  -o-transition: border-color 0.7s;
+  transition: border-color 0.7s;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+  border-color: var(--color-yellow); 
+  color: var(--color-text-additional);
+}
+
+::-webkit-input-placeholder { /* Edge */
+  font-size: 12px;
+  line-height: 21px;
+  color: var(--color-form-text);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 12px;
+  line-height: 21px;
+  color: var(--color-form-text);
+}
+
+::-moz-placeholder {
+  font-size: 12px;
+  line-height: 21px;
+  color: var(--color-form-text);
+}
+
+::-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 21px;
+  color: var(--color-form-text);
+}
+
+::placeholder {
+  font-size: 12px;
+  line-height: 21px;
+  color: var(--color-form-text);
+}

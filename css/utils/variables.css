@@ -1,0 +1,18 @@
+:root {
+  --background-dark       : #2d303a;
+  --light-dark            : #323746;
+  --background-light      : #f2f2f2;
+  --background-blue       : #648BF0;
+  --color-light           : #ffffff;
+  --color-border          : #dedede;
+  --color-primary         : #f06c64;
+  --color-headers         : #666d89;
+  --color-text            : #767e9e;
+  --color-text-additional : #f0d8d9;
+  --color-form-text       : #f48c8f;
+  --color-form-input      : #d6564f;
+  --color-pink            : #ea676d;
+  --color-black           : black;
+  --color-yellow          : #FBC65F;
+  --color-text-button     : #886A30;  
+}

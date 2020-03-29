@@ -1,0 +1,151 @@
+.services {
+  background: var(--background-light);
+  position: relative;
+  border-bottom: 6px solid var(--color-light);
+}
+
+.services__wrapper {
+  padding: 0 10px 52px;
+}
+
+.services__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--color-headers);  
+  padding-top: 61px;
+}
+
+.services__desc {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300px;
+  color: var(--color-text);
+  margin-bottom: 23px;
+  text-align: justify;
+}
+
+.services__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.services__item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%; 
+  padding-left: 80px;
+  position: relative;
+  text-align: justify;
+}
+
+.services__item::before {
+  position: absolute;
+  content: "";
+  width: 59px;
+  height: 59px;
+  background-position: center;
+  left: 0;
+  top: 24px;
+}
+
+.services__item--pen::before {
+  background-image: url("../../assets/img/pen.png"); 
+}
+
+.services__item--bulb::before {
+  background-image: url("../../assets/img/bulb.png");  
+}
+
+.services__item--heart::before {
+  background-image: url("../../assets/img/heart.png"); 
+}
+
+.services__item--phone::before {
+  background-image: url("../../assets/img/phone.png"); 
+}
+
+.services__item--bubble::before {
+  background-image: url("../../assets/img/bubble.png"); 
+}
+
+.services__item--star::before {
+  background-image: url("../../assets/img/star.png"); 
+}
+
+.services__item-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-headers);
+  margin-top: 21px;
+  margin-bottom: 9px;
+}
+
+.services__content {
+  margin: 0;
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 10px;
+  max-height: 83px;
+  overflow: hidden;
+}
+
+@media(max-width: 1019px) { 
+  .services__wrapper {
+    padding: 42px 32px 0;
+  }
+ 
+  .services__title {
+    padding-top: 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .services {
+    border: none;
+    padding-bottom: 22px;
+  }  
+  
+  .services__desc {
+    margin-bottom: 45px;
+  }
+    
+  .services__item {
+    margin-bottom: 58px;
+    padding-right: 34px;
+    flex-basis: 50%;
+  }
+
+  .services__item::before {
+    top: 0;
+  }
+
+  .services__item-title { 
+    margin-top: 0;
+  }
+
+  .services__content {
+    margin: 0;    
+    max-height: 63px;
+  }
+}  
+
+@media (max-width: 687px) {
+  .services {
+    padding-bottom: 0;
+  }
+
+  .services__wrapper {
+    padding: 42px 32px 0;
+  }
+
+  .services__item {
+    margin-bottom: 35px;
+    padding-right: 16px;
+    flex-basis: 100%;
+  }  
+}  
