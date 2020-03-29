@@ -40,7 +40,7 @@
   font-weight: 700;
   color: var(--color-light);
   margin: 0;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .header__logo-asterisk {
