@@ -181,11 +181,7 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .slider__button {    
-    width: 15%;
-  }
-   
+@media (max-width: 1020px) {
   .slider__button--prev {    
     background-position: 30px 50%;
   }
@@ -193,7 +189,13 @@
   .slider__button--next {
     background-position: calc(100% - 30px) 50%;
   } 
+}
 
+@media (max-width: 1019px) {
+  .slider__button {    
+    width: 15%;
+  }
+ 
   .slider__images {  
     width: 650px;
   }
