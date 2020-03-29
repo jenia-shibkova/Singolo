@@ -57,30 +57,36 @@ const headerMenuAction = () => {
 const scrollAction = () => {
   document.addEventListener('scroll', (event) => {
     const headerWrapper = document.querySelector('.header__wrapper');
+    const popup = document.querySelector('.popup');
+
+    if (popup) {
+      event.preventDefault();
+      window.scrollTo(0, 0);
+    }
+
     if (headerWrapper.classList.contains('header__wrapper--opened')) {
       event.preventDefault();
       window.scrollTo(0, 0);
-    } else {
-      const headerHeight = 94;
-      const cursorPosition = window.scrollY + headerHeight;
-      const sections = document.querySelectorAll('.content>section');
-      const links = document.querySelectorAll('.navigation__item-link');
+    } 
+    
+    const headerHeight = 94;
+    const cursorPosition = window.scrollY + headerHeight;
+    const sections = document.querySelectorAll('.content>section');
+    const links = document.querySelectorAll('.navigation__item-link');
 
-      sections.forEach((el) => {
-        el.getAttribute('id');
+    sections.forEach((el) => {
+      el.getAttribute('id');
 
-        if (el.offsetTop <= cursorPosition && (el.offsetTop + el.offsetHeight) > cursorPosition) {
-          links.forEach((link) => {
-            link.classList.remove('navigation__item-link--active');
+      if (el.offsetTop <= cursorPosition && (el.offsetTop + el.offsetHeight) > cursorPosition) {
+        links.forEach((link) => {
+          link.classList.remove('navigation__item-link--active');
             
-            if(el.getAttribute('id') === link.getAttribute('href').substring(1)) {
-              link.classList.add('navigation__item-link--active');
-            }
-          });
-        }
-      });
-    }
-
+          if(el.getAttribute('id') === link.getAttribute('href').substring(1)) {
+            link.classList.add('navigation__item-link--active');
+          }
+        });
+      }
+    });
     
   });
 };
@@ -300,6 +306,7 @@ const sliderAction = () => {
     }
   });
 };
+
 
 window.onload = () => {
   onNavigationClick();
