@@ -4,15 +4,15 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* width: 940px; */
   width: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;        
 }
 
-@media(max-width: 768px) {
+/* @media(max-width: 768px) {
   .layout-3-columns {
     justify-content: flex-start;
   }  
-}
+} */
