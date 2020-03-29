@@ -304,7 +304,7 @@ const sliderAction = () => {
 window.onload = () => {
   onNavigationClick();
   onTagsClick();
-  // addBlackScreen();
+  addBlackScreen();
   popupAction();
   sliderAction();
   scrollAction();
